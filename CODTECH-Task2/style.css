@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+body{
+    height: 50vh;
+    margin-top: 25vh;
+    margin-bottom: 15vh;
+    align-items: center;
+    /* max-width: 2000px; */
+    background-color: skyblue;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    /* width: min(300px , 35vw); */
+    width: min(95vw, 500px);
+    /* width: 300px; */
+    /* width: 35vw; */
+    /* border: 1px solid black; */
+    margin: 70px auto 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4fcff;
+    border-radius: 10px;
+    /* row-gap: 10px; */
+    align-items: center;
+    /* justify-content: space-evenly; */
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.3);
+    
+}
+
+.wrapper h1{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-area{
+    /* border: 2px solid brown; */
+    width: 100%;
+    display: flex;
+    /* border-radius: 24px; */
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.input-area input{
+    width: 60%;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: black;
+    border-bottom: 2px solid #d8d1d1;
+    background: transparent;
+}
+
+
+.input-area input:focus{
+    border-color: rgb(15, 242, 15);
+}
+
+.input-area button{
+    width: min(40% , 80px);
+    padding: 6px 14px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: rgba(63, 230, 63, 0.653);
+    color: rgb(60, 33, 33);
+    cursor: default;
+    box-shadow: 3px 3px 3px rgba(172, 169, 169, 0.3),
+    -3px -3px 8px rgba(172, 169, 169, 0.3)
+    ;
+}
+
+.input-area button:hover{
+    background-color: rgb(15, 242, 15);
+}
+
+
+
+/* TASKS AREA */
+
+
+.tasks{
+    /* border: 2px solid orangered; */
+    /* text-align: start; */
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks p{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px auto;
+}
+
+/* li{
+    list-style: none;
+} */
+
+.tasks img{
+    height: 20px;
+    width: 20px;
+}
+
+.tasks ul li{
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 6px;
+    list-style: none;
+    
+    /* column-gap: 6px; */
+}
+.uncompleted-tasks{
+    border-top: 2px solid #d8d1d1;
+    margin-top: 13px;
+}
+
+
+/* GENERATED INSIDE JS */
+.task-data{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.task-status{
+    display: flex;
+}
+
+.task-msg{
+    display: flex;
+    font-weight: 500;
+    /* text-decoration: line-through; */
+    /* text-decoration-color: rgb(15, 242, 15); */
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.edit-icon{
+    display: hidden;
+    /* <img src="https://cdn-icons-png.flaticon.com/512/1160/1160515.png" alt="edit" class="edit-icon"> */
+}
+
+.delete-icon{
+    display: flex;
+}
+
+.delete-icon:hover{
+    animation: bubble 0.2s ease infinite alternate forwards;
+    /* padding: 3px; */
+    /* box-sizing: content-box; */
+    border-radius: 50%;
+    background-color: #d8d1d1;
+}
+
+@keyframes bubble {
+    from{
+        padding: 3px;
+    }
+    to {
+        padding: 5px;
+    }
+}
+/* TILL HERE */
+
+
+
+/* UNCOMPLETE SECTION ALSO GENERATED VIA JS */
+.completed-tasks{
+    margin-top: 18px;
+}
+/* TILL HERE */
+
+
+
+.error{
+    display: none;
+    /* display: inline-block; */
+    width: min(500px, 95vw);
+    /* border: 1px solid black; */
+    margin:auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 0px;
+    background-color: #1f94c680;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.3);
+    cursor: default;
+    
+    
+    background-color: red;
+    color: white;
+    /* text-decoration: line-through; */
+}
+
+.shake-animation{
+    animation: shake 0.2s 3 alternate forwards;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0px);
+        
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+
+    75%{
+        transform: translateX(-10px);
+    }
+}

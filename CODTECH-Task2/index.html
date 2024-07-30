@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO-DO List</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2387/2387635.png" type="png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <main class="wrapper">
+            <h1>TO-DO LIST</h1>
+            <section class="input-area">
+                <input type="text" placeholder="Add New Task.." class="js-input-section">
+                <button class="js-btn">Add</button>
+            </section>
+            <section class="tasks js-tasks">
+                <p>
+                    You have <span class="task-remaining">-</span>
+                    Task(s) yet to be completed.
+                </p>
+                <ul class="uncompleted-tasks js-uncomplete-tasks">
+           
+                </ul>
+                <hr>
+                <ul class="completed-tasks">
+                    <!-- <li>Task 4</li> -->
+                </ul>
+            </section>
+        </main>
+        <div class="error js-error">
+            Input field cannot be empty.
+        </div>
+        <!-- SCRIPT -->
+        <script src="script.js"></script>
+    </body>
+</html>
